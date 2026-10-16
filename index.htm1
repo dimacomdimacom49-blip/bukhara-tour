@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUKHARA TOUR</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f3ed;
+      color: #222;
+    }
+    header {
+      background: #123c35;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { margin-bottom: 0; }
+    .hero {
+      padding: 35px 15px;
+      text-align: center;
+      background: #e8dfc5;
+    }
+    .hero h2 { color: #123c35; }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 22px 10px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .icon { font-size: 35px; }
+    .card h3 { color: #123c35; }
+    .card a {
+      display: inline-block;
+      padding: 10px 14px;
+      background: #c59b42;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #123c35;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌍 BUKHARA TOUR</h1>
+  <p>Discover Bukhara — Experience Uzbekistan</p>
+</header>
+
+<section class="hero">
+  <h2>Welcome to Bukhara!</h2>
+  <p>Find your guide, transport, hotel and restaurant in one place.</p>
+  <p>O‘zbekistondagi sayohatingizni biz bilan rejalashtiring!</p>
+</section>
+
+<section class="services">
+  <div class="card">
+    <div class="icon">🗣️</div>
+    <h3>Gidlar va tarjimonlar</h3>
+    <p>O‘zingizga mos gidni toping.</p>
+    <a href="#booking">Buyurtma</a>
+  </div>
+  <div class="card">
+    <div class="icon">🚙</div>
+    <h3>Golfkarlar</h3>
+    <p>Shahar bo‘ylab sayohat.</p>
+    <a href="#booking">Buyurtma</a>
+  </div>
+  <div class="card">
+    <div class="icon">🚘</div>
+    <h3>Komfort avtomobillar</h3>
+    <p>Qulay transport xizmatlari.</p>
+    <a href="#booking">Buyurtma</a>
+  </div>
+  <div class="card">
+    <div class="icon">🏨</div>
+    <h3>Mehmonxonalar</h3>
+    <p>O‘zingizga mos turar joyni toping.</p>
+    <a href="#booking">Buyurtma</a>
+  </div>
+  <div class="card">
+    <div class="icon">🍽️</div>
+    <h3>Restoranlar</h3>
+    <p>Mahalliy taomlarni kashf eting.</p>
+    <a href="#booking">Buyurtma</a>
+  </div>
+</section>
+
+<section id="booking" class="hero">
+  <h2>Book Your Experience</h2>
+  <p>Buyurtma berish tizimi keyingi bosqichda qo‘shiladi.</p>
+</section>
+
+<footer>
+  <p>© 2026 BUKHARA TOUR</p>
+  <p>Your Journey, Our Hospitality!</p>
+</footer>
+
+</body>
+</html>
