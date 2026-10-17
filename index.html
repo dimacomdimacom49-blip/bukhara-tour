@@ -1,83 +1,16 @@
-[Сб 17.10.26 5:54] ——: en:{tagline:"Discover Bukhara — Experience Uzbekistan",welcome:"Welcome to Bukhara!",intro:"Find your guide, transport, hotel and restaurant in one place.",guides:"Guides and Translators",guidesD:"Find the right guide for you.",golf:"Golf Carts",golfD:"Explore the city with ease.",cars:"Comfortable Cars",carsD:"Comfortable transport services.",hotels:"Hotels",hotelsD:"Find suitable accommodation.",restaurants:"Restaurants",restaurantsD:"Discover local cuisine.",order:"Book Now",booking:"Plan Your Experience",bookingD:"The booking system will be added later.",footer:"Your Journey, Our Hospitality!"},
-tr:{tagline:"Buhara’yı keşfedin — Özbekistan’ı deneyimleyin",welcome:"Buhara’ya hoş geldiniz!",intro:"Rehber, ulaşım, otel ve restoranları tek yerde bulun.",guides:"Rehberler ve Tercümanlar",guidesD:"Size uygun rehberi bulun.",golf:"Golf Arabaları",golfD:"Şehri rahatça keşfedin.",cars:"Konforlu Araçlar",carsD:"Konforlu ulaşım hizmetleri.",hotels:"Oteller",hotelsD:"Size uygun konaklama bulun.",restaurants:"Restoranlar",restaurantsD:"Yerel lezzetleri keşfedin.",order:"Rezervasyon",booking:"Seyahatinizi planlayın",bookingD:"Rezervasyon sistemi daha sonra eklenecek.",footer:"Seyahatiniz, bizim misafirperverliğimiz!"},
-zh:{tagline:"探索布哈拉，感受乌兹别克斯坦",welcome:"欢迎来到布哈拉！",intro:"在这里查找导游、交通、酒店和餐厅。",guides:"导游和翻译",guidesD:"寻找适合您的导游。",golf:"高尔夫球车",golfD:"轻松游览城市。",cars:"舒适汽车",carsD:"舒适的交通服务。",hotels:"酒店",hotelsD:"寻找适合您的住宿。",restaurants:"餐厅",restaurantsD:"探索当地美食。",order:"预订",booking:"规划您的旅程",bookingD:"预订系统将在以后推出。",footer:"您的旅程，我们的热情款待！"},
-tg:{tagline:"Бухороро кашф кунед — Ӯзбекистонро эҳсос намоед",welcome:"Ба Бухоро хуш омадед!",intro:"Роҳбалад, нақлиёт, меҳмонхона ва тарабхонаро дар як ҷо пайдо кунед.",guides:"Роҳбаладон ва тарҷумонҳо",guidesD:"Роҳбалади мувофиқро пайдо кунед.",golf:"Голфкарҳо",golfD:"Дар шаҳр сайругашт кунед.",cars:"Мошинҳои бароҳат",carsD:"Хизматрасонии нақлиёт.",hotels:"Меҳмонхонаҳо",hotelsD:"Ҷойи мувофиқро пайдо кунед.",restaurants:"Тарабхонаҳо",restaurantsD:"Таомҳои маҳаллиро кашф кунед.",order:"Фармоиш",booking:"Сафари худро ба нақша гиред",bookingD:"Системаи фармоиш баъдтар илова мешавад.",footer:"Сафари шумо — меҳмоннавозии мо!"},
-es:{tagline:"Descubre Bujará — Vive Uzbekistán",welcome:"¡Bienvenido a Bujará!",intro:"Encuentra guía, transporte, hotel y restaurante en un solo lugar.",guides:"Guías e intérpretes",guidesD:"Encuentra el guía ideal.",golf:"Carritos de golf",golfD:"Explora la ciudad cómodamente.",cars:"Coches cómodos",carsD:"Servicios de transporte cómodos.",hotels:"Hoteles",hotelsD:"Encuentra alojamiento adecuado.",restaurants:"Restaurantes",restaurantsD:"Descubre la gastronomía local.",order:"Reservar",booking:"Planifica tu experiencia",bookingD:"El sistema de reservas se añadirá más adelante.",footer:"¡Tu viaje, nuestra hospitalidad!"}
-};
-function changeLanguage(lang){
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-t]").forEach(el=>{
 const key=el.getAttribute("data-t");
-if(T[lang][key])el.textContent=T[lang][key];
+if(words[key])el.textContent=words[key];
 });
 try{localStorage.setItem("bukharaTourLanguage",lang)}catch(e){}
 }
 const select=document.getElementById("language");
-select.addEventListener("change",()=>changeLanguage(select.value));
+select.addEventListener("change",function(){changeLanguage(select.value)});
 let saved="uz";
 try{saved=localStorage.getItem("bukharaTourLanguage")||"uz"}catch(e){}
+if(!T[saved])saved="uz";
 select.value=saved;
 changeLanguage(saved);
+function contact(){alert(T[select.value].bookingD)}
 </script>
 </body>
-</html>
-[Сб 17.10.26 6:02] ——: en:{tagline:"Discover Bukhara — Experience Uzbekistan",welcome:"Welcome to Bukhara!",intro:"Find your guide, transport, hotel and restaurant in one place.",guides:"Guides and Translators",guidesD:"Find the right guide for you.",golf:"Golf Carts",golfD:"Explore the city with ease.",cars:"Comfortable Cars",carsD:"Comfortable transport services.",hotels:"Hotels",hotelsD:"Find suitable accommodation.",restaurants:"Restaurants",restaurantsD:"Discover local cuisine.",order:"Book Now",booking:"Plan Your Experience",bookingD:"The booking system will be added later.",footer:"Your Journey, Our Hospitality!"},
-tr:{tagline:"Buhara’yı keşfedin — Özbekistan’ı deneyimleyin",welcome:"Buhara’ya hoş geldiniz!",intro:"Rehber, ulaşım, otel ve restoranları tek yerde bulun.",guides:"Rehberler ve Tercümanlar",guidesD:"Size uygun rehberi bulun.",golf:"Golf Arabaları",golfD:"Şehri rahatça keşfedin.",cars:"Konforlu Araçlar",carsD:"Konforlu ulaşım hizmetleri.",hotels:"Oteller",hotelsD:"Size uygun konaklama bulun.",restaurants:"Restoranlar",restaurantsD:"Yerel lezzetleri keşfedin.",order:"Rezervasyon",booking:"Seyahatinizi planlayın",bookingD:"Rezervasyon sistemi daha sonra eklenecek.",footer:"Seyahatiniz, bizim misafirperverliğimiz!"},
-zh:{tagline:"探索布哈拉，感受乌兹别克斯坦",welcome:"欢迎来到布哈拉！",intro:"在这里查找导游、交通、酒店和餐厅。",guides:"导游和翻译",guidesD:"寻找适合您的导游。",golf:"高尔夫球车",golfD:"轻松游览城市。",cars:"舒适汽车",carsD:"舒适的交通服务。",hotels:"酒店",hotelsD:"寻找适合您的住宿。",restaurants:"餐厅",restaurantsD:"探索当地美食。",order:"预订",booking:"规划您的旅程",bookingD:"预订系统将在以后推出。",footer:"您的旅程，我们的热情款待！"},
-tg:{tagline:"Бухороро кашф кунед — Ӯзбекистонро эҳсос намоед",welcome:"Ба Бухоро хуш омадед!",intro:"Роҳбалад, нақлиёт, меҳмонхона ва тарабхонаро дар як ҷо пайдо кунед.",guides:"Роҳбаладон ва тарҷумонҳо",guidesD:"Роҳбалади мувофиқро пайдо кунед.",golf:"Голфкарҳо",golfD:"Дар шаҳр сайругашт кунед.",cars:"Мошинҳои бароҳат",carsD:"Хизматрасонии нақлиёт.",hotels:"Меҳмонхонаҳо",hotelsD:"Ҷойи мувофиқро пайдо кунед.",restaurants:"Тарабхонаҳо",restaurantsD:"Таомҳои маҳаллиро кашф кунед.",order:"Фармоиш",booking:"Сафари худро ба нақша гиред",bookingD:"Системаи фармоиш баъдтар илова мешавад.",footer:"Сафари шумо — меҳмоннавозии мо!"},
-es:{tagline:"Descubre Bujará — Vive Uzbekistán",welcome:"¡Bienvenido a Bujará!",intro:"Encuentra guía, transporte, hotel y restaurante en un solo lugar.",guides:"Guías e intérpretes",guidesD:"Encuentra el guía ideal.",golf:"Carritos de golf",golfD:"Explora la ciudad cómodamente.",cars:"Coches cómodos",carsD:"Servicios de transporte cómodos.",hotels:"Hoteles",hotelsD:"Encuentra alojamiento adecuado.",restaurants:"Restaurantes",restaurantsD:"Descubre la gastronomía local.",order:"Reservar",booking:"Planifica tu experiencia",bookingD:"El sistema de reservas se añadirá más adelante.",footer:"¡Tu viaje, nuestra hospitalidad!"}
-};
-function changeLanguage(lang){
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-t]").forEach(el=>{
-const key=el.getAttribute("data-t");
-if(T[lang][key])el.textContent=T[lang][key];
-});
-try{localStorage.setItem("bukharaTourLanguage",lang)}catch(e){}
-}
-const select=document.getElementById("language");
-select.addEventListener("change",()=>changeLanguage(select.value));
-let saved="uz";
-try{saved=localStorage.getItem("bukharaTourLanguage")||"uz"}catch(e){}
-select.value=saved;
-changeLanguage(saved);
-</script>
-</body>
-</html>
-[Сб 17.10.26 6:11] ——: try{saved=localStorage.getItem("bukharaTourLanguage")||"uz"}catch(e){}
-[Сб 17.10.26 6:14] ——: function changeLanguage(lang){
-const words=T[lang] || T.uz;
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-t]").forEach(function(el){
-const key=el.getAttribute("data-t");
-if(words[key]) el.textContent=words[key];
-});
-try{
-localStorage.setItem("bukharaTourLanguage",lang);
-}catch(e){}
-}
-
-const select=document.getElementById("language");
-select.addEventListener("change",function(){
-changeLanguage(select.value);
-});
-
-let saved="uz";
-try{
-saved=localStorage.getItem("bukharaTourLanguage") || "uz";
-}catch(e){}
-if(!T[saved]) saved="uz";
-select.value=saved;
-changeLanguage(saved);
-
-function contact(){
-alert(T[select.value].bookingD);
-}
-</script>
-
-</body>
-</html>
-
-
-
 </html>
