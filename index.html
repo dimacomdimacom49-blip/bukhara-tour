@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUKHARA TOUR | Explore Bukhara</title>
+<meta name="description" content="Buxoro bo‘ylab gidlar, golf-kartlar, avtomobillar, mehmonxonalar va restoranlar.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f4ed;color:#222}
+header{background:#075b43;color:white;text-align:center;padding:24px 12px}
+header h1{margin:0;font-size:30px;letter-spacing:2px}
+header p{margin-bottom:0}
+nav{background:#064532;padding:12px;text-align:center}
+select{padding:10px;border-radius:8px;border:0;font-size:16px}
+.hero{text-align:center;padding:38px 16px;background:linear-gradient(135deg,#ead9b8,#fff8e9)}
+.hero h2{color:#075b43;font-size:28px}
+.hero p{line-height:1.6}
+.container{max-width:1100px;margin:auto;padding:22px}
+.section-title{text-align:center;color:#075b43}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:22px 17px;border-radius:15px;text-align:center;box-shadow:0 4px 14px #00000012}
+.icon{font-size:48px}
+.card h3{color:#075b43}
+.card p{line-height:1.6;min-height:48px}
+.order,.contact-btn{display:inline-block;background:#087b53;color:white;padding:12px 17px;border-radius:8px;text-decoration:none;font-weight:bold}
+.order:hover,.contact-btn:hover{background:#043d2d}
+.about{text-align:center;line-height:1.8;padding:10px 20px 30px}
+.contact{background:#075b43;color:white;text-align:center;padding:30px 15px;line-height:1.8}
+.contact a{color:white}
+footer{background:#043526;color:white;text-align:center;padding:17px}
+@media(max-width:480px){header h1{font-size:25px}.hero h2{font-size:23px}.container{padding:14px}}
+</style>
+</head>
+<body>
 
+<header>
+<h1>🌍 BUKHARA TOUR</h1>
+<p id="subtitle">Buxoroni biz bilan kashf eting!</p>
+</header>
+
+<nav>
+<select id="language" onchange="changeLanguage()" aria-label="Tilni tanlang">
+<option value="uz">🇺🇿 O‘zbekcha</option>
+<option value="ru">🇷🇺 Русский</option>
+<option value="en">🇬🇧 English</option>
+<option value="tr">🇹🇷 Türkçe</option>
+<option value="zh">🇨🇳 中文</option>
+<option value="tj">🇹🇯 Тоҷикӣ</option>
+<option value="es">🇪🇸 Español</option>
+</select>
+</nav>
+
+<section class="hero">
+<h2 id="welcome">Buxoro shahriga xush kelibsiz!</h2>
+<p id="description">Sayohatingiz uchun kerakli xizmatlarni bir joydan toping.</p>
+<a class="order" href="#services" id="explore">Xizmatlarni ko‘rish</a>
+</section>
+
+<main class="container" id="services">
+<h2 class="section-title" id="servicesTitle">Bizning xizmatlarimiz</h2>
+<div class="services">
+
+<div class="card">
+<div class="icon">🧑‍💼</div>
+<h3 id="guide">Gid va tarjimonlar</h3>
+<p id="guideDesc">Buxoro bo‘ylab professional gid va tarjimonlar.</p>
+<a class="order" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener" id="guideBtn">Buyurtma berish</a>
+</div>
+
+<div class="card">
+<div class="icon">🚙</div>
+<h3 id="golf">Golf-kartlar</h3>
+<p id="golfDesc">Shahar bo‘ylab qulay sayohat xizmati.</p>
+<a class="order" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener" id="golfBtn">Buyurtma berish</a>
+</div>
+
+<div class="card">
+<div class="icon">🚘</div>
+<h3 id="car">Komfort avtomobillar</h3>
+<p id="carDesc">Qulay va ishonchli transport xizmatlari.</p>
+<a class="order" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener" id="carBtn">Buyurtma berish</a>
+</div>
+
+<div class="card">
+<div class="icon">🏨</div>
+<h3 id="hotel">Mehmonxonalar</h3>
+<p id="hotelDesc">Buxoroda tunash uchun mehmonxonalar.</p>
+<a class="order" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener" id="hotelBtn">Buyurtma berish</a>
+</div>
+
+<div class="card">
+<div class="icon">🍽</div>
+<h3 id="restaurant">Restoranlar</h3>
+<p id="restaurantDesc">Milliy taomlar va restoranlar.</p>
+<a class="order" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener" id="restaurantBtn">Buyurtma berish</a>
+</div>
+
+</div>
+</main>
+
+<section class="about">
+<h2 id="whyTitle">Nega BUKHARA TOUR?</h2>
+<p id="whyDesc">Buxoro sayohatingizni rejalashtirish uchun kerakli xizmatlarni bir joyda toping. Savollaringiz bo‘lsa, biz bilan Telegram orqali bog‘laning.</p>
+</section>
+
+<section class="contact">
+<h2 id="contactTitle">Biz bilan bog‘laning</h2>
+<p id="contactDesc">Buyurtma va ma’lumot uchun Telegram orqali yozing.</p>
+<a class="contact-btn" href="https://t.me/DiyorbekTurabov" target="_blank" rel="noopener">📩 Telegram: @DiyorbekTurabov</a>
+</section>
+
+<footer>
+© 2026 BUKHARA TOUR
+<p id="footerText">Buxoroga xush kelibsiz!</p>
+</footer>
+
+<script>
+const translations = {
+uz:{
+subtitle:"Buxoroni biz bilan kashf eting!",
+welcome:"Buxoro shahriga xush kelibsiz!",
+description:"Sayohatingiz uchun kerakli xizmatlarni bir joydan toping.",
+explore:"Xizmatlarni ko‘rish",servicesTitle:"Bizning xizmatlarimiz",
+guide:"Gid va tarjimonlar",guideDesc:"Buxoro bo‘ylab professional gid va tarjimonlar.",
+golf:"Golf-kartlar",golfDesc:"Shahar bo‘ylab qulay sayohat xizmati.",
+car:"Komfort avtomobillar",carDesc:"Qulay va ishonchli transport xizmatlari.",
+hotel:"Mehmonxonalar",hotelDesc:"Buxoroda tunash uchun mehmonxonalar.",
+restaurant:"Restoranlar",restaurantDesc:"Milliy taomlar va restoranlar.",
+whyTitle:"Nega BUKHARA TOUR?",whyDesc:"Buxoro sayohatingiz uchun kerakli xizmatlarni bir joyda toping. Savollaringiz bo‘lsa, Telegram orqali bog‘laning.",
+contactTitle:"Biz bilan bog‘laning",contactDesc:"Buyurtma va ma’lumot uchun Telegram orqali yozing.",btn:"Buyurtma berish",footerText:"Buxoroga xush kelibsiz!"
+},
+ru:{
+subtitle:"Откройте Бухару вместе с нами!",
+welcome:"Добро пожаловать в Бухару!",
+description:"Все необходимые услуги для вашего путешествия в одном месте.",
+explore:"Наши услуги",servicesTitle:"Наши услуги",
+guide:"Гиды и переводчики",guideDesc:"Профессиональные гиды и переводчики в Бухаре.",
+golf:"Гольф-кары",golfDesc:"Комфортные поездки по городу.",
+car:"Комфортабельные автомобили",carDesc:"Удобный и надежный транспорт.",
+hotel:"Гостиницы",hotelDesc:"Гостиницы для проживания в Бухаре.",
+restaurant:"Рестораны",restaurantDesc:"Национальная кухня и рестораны.",
+whyTitle:"Почему BUKHARA TOUR?",whyDesc:"Находите услуги для путешествия по Бухаре в одном месте. Свяжитесь с нами через Telegram.",
+contactTitle:"Свяжитесь с нами",contactDesc:"Напишите нам в Telegram для заказа и информации.",btn:"Заказать",footerText:"Добро пожаловать в Бухару!"
+},
+en:{
+subtitle:"Discover Bukhara with us!",
+welcome:"Welcome to Bukhara!",
+description:"Find the services you need for your trip in one place.",
+explore:"Explore services",servicesTitle:"Our Services",
+guide:"Guides and Translators",guideDesc:"Professional guides and translators in Bukhara.",
+golf:"Golf Carts",golfDesc:"Comfortable rides around the city.",
+car:"Comfort Cars",carDesc:"Convenient and reliable transport.",
+hotel:"Hotels",hotelDesc:"Find accommodation in Bukhara.",
+restaurant:"Restaurants",restaurantDesc:"Local cuisine and restaurants.",
+whyTitle:"Why BUKHARA TOUR?",whyDesc:"Find the services you need for your Bukhara trip in one place. Contact us on Telegram.",
+contactTitle:"Contact Us",contactDesc:"Message us on Telegram for bookings and information.",btn:"Book Now",footerText:"Welcome to Bukhara!"
+},
+tr:{
+subtitle:"Buhara'yı bizimle keşfedin!",
+welcome:"Buhara'ya hoş geldiniz!",
+description:"Seyahatiniz için gerekli hizmetleri tek yerde bulun.",
+explore:"Hizmetleri keşfet",servicesTitle:"Hizmetlerimiz",
+guide:"Rehberler ve Tercümanlar",guideDesc:"Buhara'da profesyonel rehber ve tercümanlar.",
+golf:"Golf Arabaları",golfDesc:"Şehir içinde konforlu yolculuk.",
+car:"Konforlu Araçlar",carDesc:"Rahat ve güvenilir ulaşım.",
+hotel:"Oteller",hotelDesc:"Buhara'da konaklama seçenekleri.",
+restaurant:"Restoranlar",restaurantDesc:"Yerel yemekler ve restoranlar.",
+whyTitle:"Neden BUKHARA TOUR?",whyDesc:"Buhara seyahatiniz için gerekli hizmetleri tek yerde bulun. Telegram üzerinden bize ulaşın.",
+contactTitle:"Bize Ulaşın",contactDesc:"Rezervasyon ve bilgi için Telegram'dan yazın.",btn:"Rezervasyon Yap",footerText:"Buhara'ya hoş geldiniz!"
+},
+zh:{
+subtitle:"与我们一起探索布哈拉！",
+welcome:"欢迎来到布哈拉！",
+description:"在一个地方找到旅行所需的服务。",
+explore:"查看服务",servicesTitle:"我们的服务",
+guide:"导游和翻译",guideDesc:"布哈拉专业导游和翻译服务。",
+golf:"高尔夫球车",golfDesc:"舒适的城市游览。",
+car:"舒适汽车",carDesc:"方便可靠的交通服务。",
+hotel:"酒店",hotelDesc:"查找布哈拉住宿酒店。",
+restaurant:"餐厅",restaurantDesc:"当地美食和餐厅。",
+whyTitle:"为什么选择 BUKHARA TOUR？",whyDesc:"在一个地方找到布哈拉旅行所需的服务。欢迎通过 Telegram 联系我们。",
+contactTitle:"联系我们",contactDesc:"请通过 Telegram 咨询和预订。",btn:"立即预订",footerText:"欢迎来到布哈拉！"
+},
+tj:{
+subtitle:"Бухороро бо мо кашф кунед!",
+welcome:"Ба Бухоро хуш омадед!",
+description:"Хизматрасониҳои сафарро дар як ҷо пайдо кунед.",
+explore:"Дидани хизматрасониҳо",servicesTitle:"Хизматрасониҳои мо",
+guide:"Роҳбаладон ва тарҷумонҳо",guideDesc:"Роҳбаладон ва тарҷумонҳои касбӣ дар Бухоро.",
+golf:"Мошинҳои голф",golfDesc:"Саёҳати бароҳат дар шаҳр.",
+car:"Мошинҳои бароҳат",carDesc:"Хизматрасонии боэътимоди нақлиёт.",
+hotel:"Меҳмонхонаҳо",hotelDesc:"Меҳмонхонаҳо барои истироҳат дар Бухоро.",
+restaurant:"Тарабхонаҳо",restaurantDesc:"Таомҳои миллӣ ва тарабхонаҳо.",
+whyTitle:"Чаро BUKHARA TOUR?",whyDesc:"Хизматрасониҳои сафар ба Бухороро дар як ҷо пайдо кунед. Тавассути Telegram бо мо тамос гиред.",
+contactTitle:"Бо мо тамос гиред",contactDesc:"Барои фармоиш ва маълумот ба Telegram нависед.",btn:"Фармоиш додан",footerText:"Ба Бухоро хуш омадед!"
+},
+es:{
+subtitle:"¡Descubre Bujará con nosotros!",
+welcome:"¡Bienvenido a Bujará!",
+description:"Encuentra todos los servicios para tu viaje en un solo lugar.",
+explore:"Ver servicios",servicesTitle:"Nuestros servicios",
+guide:"Guías y traductores",guideDesc:"Guías y traductores profesionales en Bujará.",
+golf:"Carritos de golf",golfDesc:"Paseos cómodos por la ciudad.",
+car:"Coches cómodos",carDesc:"Transporte cómodo y fiable.",
+hotel:"Hoteles",hotelDesc:"Encuentra alojamiento en Bujará.",
+restaurant:"Restaurantes",restaurantDesc:"Comida local y restaurantes.",
+whyTitle:"¿Por qué BUKHARA TOUR?",whyDesc:"Encuentra servicios para tu viaje a Bujará en un solo lugar. Contáctanos por Telegram.",
+contactTitle:"Contáctanos",contactDesc:"Escríbenos por Telegram para reservar y obtener información.",btn:"Reservar",footerText:"¡Bienvenido a Bujará!"
+}
+};
+
+function changeLanguage(){
+ const lang=document.getElementById("language").value;
+ const t=translations[lang];
+ Object.keys(t).forEach(function(key){
+  if(key==="btn"){
+   document.querySelectorAll(".order").forEach(function(el){el.textContent=t.btn});
+  }else{
+   const el=document.getElementById(key);
+   if(el){el.textContent=t[key]}
+  }
+ });
+ document.documentElement.lang=lang;
+}
+</script>
+
+</body>
+</html>
