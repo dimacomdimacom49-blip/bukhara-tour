@@ -1,1 +1,67 @@
-
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUKHARA TOUR</title>
+<style>
+body{font-family:Arial;margin:0;background:#f5f2e9;color:#173b30}
+header,footer{background:#073b32;color:white;text-align:center;padding:22px}
+main{max-width:600px;margin:auto;padding:20px}
+.card{background:white;padding:20px;border-radius:14px;box-shadow:0 2px 10px #ccc}
+input,select,textarea,button{width:100%;padding:13px;margin:8px 0;box-sizing:border-box;border-radius:8px;border:1px solid #ccc;font-size:16px}
+button{background:#087d60;color:white;border:0;font-weight:bold}
+a{color:#087d60}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 BUKHARA TOUR</h1>
+<p>Buxoroga xush kelibsiz!</p>
+</header>
+<main>
+<div class="card">
+<h2>Sayohatga buyurtma</h2>
+<form id="booking">
+<label>Ismingiz</label>
+<input id="name" required placeholder="Ismingizni kiriting">
+<label>Telefon raqamingiz</label>
+<input id="phone" type="tel" required placeholder="+998 ...">
+<label>Kerakli xizmat</label>
+<select id="service" required>
+<option value="">Xizmatni tanlang</option>
+<option>Gid va tarjimon</option>
+<option>Golfkar xizmati</option>
+<option>Komfort avtomobil</option>
+<option>Mehmonxona</option>
+<option>Restoran</option>
+</select>
+<label>Sayohat sanasi</label>
+<input id="date" type="date" required>
+<label>Odamlar soni</label>
+<input id="people" type="number" min="1" value="1" required>
+<label>Qo‘shimcha izoh</label>
+<textarea id="note" placeholder="Qo‘shimcha ma’lumot"></textarea>
+<button type="submit">Buyurtmani tayyorlash</button>
+</form>
+<p id="result"></p>
+</div>
+</main>
+<footer>© 2026 BUKHARA TOUR</footer>
+<script>
+document.getElementById("booking").addEventListener("submit",function(e){
+e.preventDefault();
+const msg="BUKHARA TOUR BUYURTMASI\n"+
+"Ism: "+document.getElementById("name").value+"\n"+
+"Telefon: "+document.getElementById("phone").value+"\n"+
+"Xizmat: "+document.getElementById("service").value+"\n"+
+"Sana: "+document.getElementById("date").value+"\n"+
+"Odamlar: "+document.getElementById("people").value+"\n"+
+"Izoh: "+document.getElementById("note").value;
+document.getElementById("result").innerHTML=
+"Buyurtma matni tayyor. Uni Telegram orqali yuborish uchun quyidagi havolani bosing: "+
+'<a target="_blank" href="https://t.me/DiyorbekTurabov">Telegramni ochish</a>';
+});
+</script>
+</body>
+</html>
