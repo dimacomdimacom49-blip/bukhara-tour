@@ -58,9 +58,11 @@ const msg="BUKHARA TOUR BUYURTMASI\n"+
 "Sana: "+document.getElementById("date").value+"\n"+
 "Odamlar: "+document.getElementById("people").value+"\n"+
 "Izoh: "+document.getElementById("note").value;
-document.getElementById("result").innerHTML=
-"Buyurtma matni tayyor. Uni Telegram orqali yuborish uchun quyidagi havolani bosing: "+
-'<a target="_blank" href="https://t.me/DiyorbekTurabov">Telegramni ochish</a>';
+document.getElementById("result").innerHTML =
+"Buyurtma tayyor. Quyidagi tugmani bosing: " +
+'<a target="_blank" href="https://t.me/share/url?url=&text=' +
+encodeURIComponent(msg) +
+'">📩 Buyurtmani Telegramda yuborish</a>'; 
 });
 </script>
 </body>
