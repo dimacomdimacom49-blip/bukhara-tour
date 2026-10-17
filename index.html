@@ -1,1 +1,254 @@
+[Сб 17.10.26 7:25] ——: ——:
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUKHARA TOUR</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f6f3eb;color:#222}
+header{background:#103d32;color:white;text-align:center;padding:25px 12px}
+header h1{margin:0;font-size:32px}
+select{padding:12px;margin-top:12px;border-radius:8px;font-size:16px}
+.hero{text-align:center;padding:35px 15px;background:#e8dcc0}
+.hero h2{color:#103d32;font-size:28px}
+.container{max-width:1050px;margin:auto;padding:25px 15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:14px;padding:24px;text-align:center;box-shadow:0 3px 12px #0001}
+.icon{font-size:42px}
+.card h3{color:#103d32}
+button{background:#b98c32;color:white;border:0;border-radius:8px;padding:12px 20px;font-size:16px;cursor:pointer}
+.booking{background:#103d32;color:white;text-align:center;padding:30px 15px}
+footer{background:#09271f;color:white;text-align:center;padding:18px}
+</style>
+</head>
+<body>
 
+<header>
+<h1>🌍 BUKHARA TOUR</h1>
+<p data-t="tagline"></p>
+<select id="language">
+<option value="uz">🇺🇿 O‘zbekcha</option>
+<option value="ru">🇷🇺 Русский</option>
+<option value="en">🇬🇧 English</option>
+<option value="tr">🇹🇷 Türkçe</option>
+<option value="zh">🇨🇳 中文</option>
+<option value="tg">🇹🇯 Тоҷикӣ</option>
+<option value="es">🇪🇸 Español</option>
+</select>
+</header>
+
+<section class="hero">
+<h2 data-t="welcome"></h2>
+<p data-t="intro"></p>
+<p data-t="intro2"></p>
+</section>
+
+<main class="container">
+<div class="cards">
+
+<div class="card">
+<div class="icon">🗣️</div>
+<h3 data-t="guides"></h3>
+<p data-t="guidesD"></p>
+<button onclick="contact()" data-t="order"></button>
+</div>
+
+<div class="card">
+<div class="icon">🚙</div>
+<h3 data-t="golf"></h3>
+<p data-t="golfD"></p>
+<button onclick="contact()" data-t="order"></button>
+</div>
+
+<div class="card">
+<div class="icon">🚘</div>
+<h3 data-t="cars"></h3>
+<p data-t="carsD"></p>
+<button onclick="contact()" data-t="order"></button>
+</div>
+
+<div class="card">
+<div class="icon">🏨</div>
+<h3 data-t="hotels"></h3>
+<p data-t="hotelsD"></p>
+<button onclick="contact()" data-t="order"></button>
+</div>
+
+<div class="card">
+<div class="icon">🍽️</div>
+<h3 data-t="restaurants"></h3>
+<p data-t="restaurantsD"></p>
+<button onclick="contact()" data-t="order"></button>
+</div>
+
+</div>
+</main>
+
+<section class="booking">
+<h2 data-t="booking"></h2>
+<p data-t="bookingD"></p>
+</section>
+
+<footer>
+<p>© 2026 BUKHARA TOUR</p>
+<p data-t="footer"></p>
+</footer>
+
+<script>
+const T = {
+uz:{
+tagline:"Buxoroni kashf eting — O‘zbekistonni his qiling",
+welcome:"Buxoroga xush kelibsiz!",
+intro:"Gid, transport, mehmonxona va restoranlarni bir joydan toping.",
+intro2:"Sayohatingizni biz bilan rejalashtiring!",
+guides:"Gidlar va tarjimonlar",
+guidesD:"O‘zingizga mos gidni toping.",
+golf:"Golfkarlar",
+golfD:"Buxoro bo‘ylab qulay sayohat.",
+cars:"Komfort avtomobillar",
+carsD:"Qulay transport xizmatlari.",
+hotels:"Mehmonxonalar",
+hotelsD:"O‘zingizga mos turar joyni toping.",
+restaurants:"Restoranlar",
+restaurantsD:"Mahalliy taomlarni kashf eting.",
+order:"Buyurtma berish",
+booking:"Sayohatingizni rejalashtiring",
+bookingD:"Xizmatlar haqida ma’lumot olish uchun buyurtma tugmasini bosing.",
+footer:"Sayohatingiz — bizning mehmondo‘stligimiz!",
+alert:"Buyurtma tizimi hali ulanmagan. Tez orada qo‘shiladi!"
+},
+ru:{
+tagline:"Откройте Бухару — почувствуйте Узбекистан",
+welcome:"Добро пожаловать в Бухару!",
+intro:"Найдите гида, транспорт, гостиницу и ресторан в одном месте.",
+intro2:"Планируйте путешествие вместе с нами!",
+guides:"Гиды и переводчики",
+guidesD:"Найдите подходящего гида.",
+golf:"Гольф-кары",
+golfD:"Комфортные поездки по Бухаре.",
+[Сб 17.10.26 7:25] ——: cars:"Комфортабельные автомобили",
+carsD:"Удобные транспортные услуги.",
+hotels:"Гостиницы",
+hotelsD:"Найдите подходящее жильё.",
+restaurants:"Рестораны",
+restaurantsD:"Откройте местную кухню.",
+order:"Заказать",
+booking:"Планируйте путешествие",
+bookingD:"Нажмите кнопку заказа, чтобы узнать об услугах.",
+footer:"Ваше путешествие — наше гостеприимство!",
+alert:"Система бронирования пока не подключена."
+},
+en:{
+tagline:"Discover Bukhara — Experience Uzbekistan",
+welcome:"Welcome to Bukhara!",
+intro:"Find guides, transport, hotels and restaurants in one place.",
+intro2:"Plan your trip with us!",
+guides:"Guides and Translators",
+guidesD:"Find the right guide for your trip.",
+golf:"Golf Carts",
+golfD:"Enjoy comfortable rides around Bukhara.",
+cars:"Comfort Cars",
+carsD:"Convenient transport services.",
+hotels:"Hotels",
+hotelsD:"Find accommodation that suits you.",
+restaurants:"Restaurants",
+restaurantsD:"Discover delicious local cuisine.",
+order:"Make an Inquiry",
+booking:"Plan Your Trip",
+bookingD:"Press the inquiry button to learn about our services.",
+footer:"Your journey — our hospitality!",
+alert:"The booking system is not connected yet."
+},
+tr:{
+tagline:"Buhara'yı keşfedin — Özbekistan'ı yaşayın",
+welcome:"Buhara'ya hoş geldiniz!",
+intro:"Rehberleri, ulaşımı, otelleri ve restoranları bulun.",
+intro2:"Seyahatinizi bizimle planlayın!",
+guides:"Rehberler ve Tercümanlar",
+guidesD:"Size uygun bir rehber bulun.",
+golf:"Golf Arabaları",
+golfD:"Buhara'da rahat geziler yapın.",
+cars:"Konforlu Araçlar",
+carsD:"Rahat ulaşım hizmetleri.",
+hotels:"Oteller",
+hotelsD:"Size uygun konaklama bulun.",
+restaurants:"Restoranlar",
+restaurantsD:"Buhara'nın yerel yemeklerini keşfedin.",
+order:"Bilgi Al",
+booking:"Seyahatinizi Planlayın",
+bookingD:"Hizmetlerimiz hakkında bilgi alın.",
+footer:"Seyahatiniz — misafirperverliğimiz!",
+alert:"Rezervasyon sistemi henüz bağlı değil."
+},
+zh:{
+tagline:"探索布哈拉 — 感受乌兹别克斯坦",
+welcome:"欢迎来到布哈拉！",
+intro:"在这里寻找导游、交通、酒店和餐厅。",
+intro2:"与我们一起规划您的旅程！",
+guides:"导游和翻译",
+guidesD:"寻找适合您的导游。",
+golf:"高尔夫球车",
+golfD:"舒适地游览布哈拉。",
+cars:"舒适型汽车",
+carsD:"便捷的交通服务。",
+hotels:"酒店",
+hotelsD:"寻找适合您的住宿。",
+restaurants:"餐厅",
+restaurantsD:"探索布哈拉当地美食。",
+order:"咨询服务",
+booking:"规划您的旅程",
+bookingD:"点击按钮了解我们的服务。",
+footer:"您的旅程 — 我们的热情款待！",
+alert:"预订系统尚未接入。"
+},
+tg:{
+tagline:"Бухороро кашф кунед — Ӯзбекистонро эҳсос намоед",
+welcome:"Ба Бухоро хуш омадед!",
+intro:"Роҳбалад, нақлиёт, меҳмонхона ва тарабхонаро пайдо кунед.",
+intro2:"Сафари худро бо мо ба нақша гиред!",
+guides:"Роҳбаладон ва тарҷумонҳо",
+guidesD:"Роҳбалади мувофиқро пайдо кунед.",
+golf:"Голфкарҳо",
+golfD:"Дар Бухоро бо роҳат сайр кунед.",
+cars:"Автомобилҳои бароҳат",
+carsD:"Хизматрасонии қулайи нақлиёт.",
+hotels:"Меҳмонхонаҳо",
+hotelsD:"Ҷойи мувофиқ барои истиқомат пайдо кунед.",
+restaurants:"Тарабхонаҳо",
+restaurantsD:"Таомҳои маҳаллии Бухороро кашф кунед.",
+order:"Дархост кардан",
+booking:"Сафари худро ба нақша гиред",
+bookingD:"Барои гирифтани маълумот тугмаро пахш кунед.",
+footer:"Сафари шумо — меҳмоннавозии мо!",
+alert:"Системаи фармоиш ҳоло фаъол нест."
+},
+es:{
+tagline:"Descubre Bujará — Vive Uzbekistán",
+welcome:"¡Bienvenido a Bujará!",
+intro:"Encuentra guías, transporte, hoteles y restaurantes.",
+intro2:"¡Planifica tu viaje con nosotros!",
+guides:"Guías y Traductores",
+guidesD:"Encuentra un guía para tu viaje.",
+golf:"Carritos de Golf",
+golfD:"Disfruta de paseos por Bujará.",
+cars:"Coches Confortables",
+carsD:"Servicios de transporte cómodos.",
+hotels:"Hoteles",
+hotelsD:"Encuentra alojamiento para tu viaje.",
+restaurants:"Restaurantes",
+restaurantsD:"Descubre la gastronomía local.",
+order:"Consultar",
+booking:"Planifica tu Viaje",
+bookingD:"Pulsa el botón para obtener información.",
+footer:"¡Tu viaje — nuestra hospitalidad!",
+alert:"El sistema de reservas aún no está conectado."
+}
+};
+
+const select=document.getElementById("language");
+
+function changeLanguage(lang){
+  const words=T[lang]||T.uz;
+  document.documentElement.lang=lang;
